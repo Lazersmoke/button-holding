@@ -1,0 +1,37 @@
+<html>
+<body>
+<script>
+pressed=0
+timePressed=0
+interval=1
+value=0
+function press(){
+pressed=1
+}
+
+function unpress(){
+pressed=0
+timePressed=0
+interval=0
+}
+
+function theLoop(){
+if(pressed){
+timePressed+=100
+}
+if(timePressed>0){
+interval=1
+}
+if(timePressed>=1000){
+interval=10
+}
+if(timePressed>=2000){
+interval=100
+}
+value+=interval
+document.getElementById('output').innerHTML=value
+}
+</script>
+<p id="output">0</p>
+<br>
+<button onmousedown="press();" onmouseup="unpress();">CLICK ME!</button>
