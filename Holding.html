@@ -32,8 +32,10 @@ if(value>9999){value=value-9999}
 document.getElementById('output').innerHTML=Math.floor(value)
 window.setTimeout("theLoop();",200)
 }
-theLoop();
 </script>
 <p id="output">0</p>
 <br>
 <button onmousedown="press();" onmouseup="unpress();">CLICK ME!</button>
+<script>
+  theLoop();
+</script>
