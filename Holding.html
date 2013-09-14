@@ -16,20 +16,20 @@ timePressed=0
 
 function theLoop(){
 if(pressed){
-timePressed+=1
+timePressed+=10
 }
 if(timePressed>=0){
 interval=1
 }
-if(timePressed>=2){
+if(timePressed>=1000){
 interval=10
 }
-if(timePressed>=100){
+if(timePressed>=10000){
 interval=100
 }
 if(pressed){value+=interval}
 document.getElementById('output').innerHTML=value
-window.setTimeout("theLoop();",500)
+window.setTimeout("theLoop();",10)
 }
 </script>
 <p id="output">0</p>
