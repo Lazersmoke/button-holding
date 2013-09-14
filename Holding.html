@@ -16,20 +16,21 @@ timePressed=0
 
 function theLoop(){
 if(pressed){
-timePressed+=10
+timePressed+=100
 }
 if(timePressed>=0){
 interval=1
 }
-if(timePressed>=1000){
+if(timePressed>=1001){
 interval=10
 }
 if(timePressed>=10000){
 interval=100
 }
 if(pressed){value+=interval}
-document.getElementById('output').innerHTML=value
-window.setTimeout("theLoop();",10)
+if(value>9999){value=value-9999}
+document.getElementById('output').innerHTML=Math.floor(value)
+window.setTimeout("theLoop();",200)
 }
 </script>
 <p id="output">0</p>
