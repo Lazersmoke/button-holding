@@ -12,7 +12,6 @@ pressed=1
 function unpress(){
 pressed=0
 timePressed=0
-interval=0
 }
 
 function theLoop(){
@@ -28,7 +27,7 @@ interval=10
 if(timePressed>=2000){
 interval=100
 }
-value+=interval
+if(pressed){value+=interval}
 document.getElementById('output').innerHTML=value
 window.setTimeout("theLoop();",100)
 }
