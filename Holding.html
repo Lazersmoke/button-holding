@@ -16,18 +16,18 @@ timePressed=0
 
 function theLoop(){
 if(pressed){
-timePressed+=100
+timePressed+=200
 }
 if(timePressed>=0){
 interval=1
 }
-if(timePressed>=1001){
+if(timePressed>=2001){
 interval=10
 }
-if(timePressed>=2001){
+if(timePressed>=4001){
 interval=100
 }
-if(timePressed>=3001){
+if(timePressed>=6001){
 interval=1000
 }
 if(pressed){value+=interval}
